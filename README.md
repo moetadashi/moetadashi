@@ -1,0 +1,5 @@
+- 👋 Hi, I’m @moetadashi
+- 👀 I’m interested in javascript technology
+- 🌱 I’m currently learning build an automated system
+- 💞️ I’m looking to collaborate on a javascript project
+- 📫 Reach me on hallomoetadashi@gmail.com
