@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografis Strategi Optimalisasi Divisi IT - Pandawa 24 Jam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flowchart-step {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .flowchart-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .kpi-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left-width: 4px;
+        }
+        .kpi-card:hover {
+             transform: scale(1.03);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-[#003459] text-white p-8 text-center shadow-lg">
+        <h1 class="text-4xl font-black tracking-tight">Transformasi Strategis Divisi IT</h1>
+        <p class="text-xl mt-2 font-light text-[#90DDF0]">Pandawa 24 Jam: Membangun Fondasi IT yang Tangguh untuk Operasional 24/7</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="analisis" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#007EA7] mb-4">Analisis Situasi: Akar Masalah Operasional</h2>
+                <p class="text-lg mb-6">Operasional IT saat ini tidak seimbang dengan kebutuhan bisnis 24/7. Kekurangan staf yang kronis memaksa tim bekerja dalam mode reaktif ("pemadam kebakaran"), menghambat penanganan isu urgen dan perencanaan strategis.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-[#007EA7] mb-2">Rasio Staf IT vs Karyawan</h3>
+                        <p class="text-7xl font-black text-[#00A8E8]">1:43</p>
+                        <p class="mt-2 text-lg">Jauh di bawah rasio ideal industri yaitu <strong class="text-[#007EA7]">1:18</strong>. Ini adalah penyebab utama beban kerja berlebih dan layanan yang tidak optimal.</p>
+                    </div>
+                    <div class="chart-container h-64 md:h-80">
+                        <canvas id="staffRatioChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="restrukturisasi" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#007EA7] mb-4">Solusi 1: Restrukturisasi Tim & Peran</h2>
+                <p class="text-lg mb-6">Kita perlu beralih dari peran generalis yang tumpang tindih ke struktur tim dengan spesialisasi yang jelas. Ini akan meningkatkan fokus, akuntabilitas, dan efisiensi. Usulan penambahan 1 posisi krusial untuk menangani dukungan lini pertama.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-[#00A8E8]">
+                        <p class="text-3xl">👤</p>
+                        <h3 class="text-xl font-bold mt-2">Manajer IT</h3>
+                        <p class="text-sm">Fokus pada Strategi, Anggaran, & Leadership</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-[#00A8E8]">
+                        <p class="text-3xl">⚙️</p>
+                        <h3 class="text-xl font-bold mt-2">Spesialis Infrastruktur</h3>
+                        <p class="text-sm">Jaringan, Server, Backend (Evolusi Peran Jafar)</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-[#00A8E8]">
+                        <p class="text-3xl">💻</p>
+                        <h3 class="text-xl font-bold mt-2">Spesialis Dukungan</h3>
+                        <p class="text-sm">Aplikasi, Frontend, User Support (Evolusi Peran Damar)</p>
+                    </div>
+                    <div class="bg-blue-100 p-4 rounded-lg border-l-4 border-blue-500 ring-2 ring-blue-300">
+                        <p class="text-3xl">💡</p>
+                        <h3 class="text-xl font-bold mt-2">Analis Dukungan L1</h3>
+                        <p class="text-sm font-semibold text-blue-800">(Posisi Baru) Titik Kontak Pertama, Triase Tiket</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="alur-kerja" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#007EA7] mb-2">Solusi 2: Alur Kerja Terpusat dengan Sistem Tiket</h2>
+                <p class="text-lg mb-6">Menghentikan pelaporan via WhatsApp dan beralih ke sistem tiket adalah langkah wajib. Ini mengubah keluhan acak menjadi data terstruktur yang dapat dilacak, diukur, dan dianalisis untuk perbaikan berkelanjutan.</p>
+                <div class="relative flex flex-col items-center w-full">
+                    <div class="flowchart-step bg-[#00A8E8] text-white p-4 rounded-full z-10 w-48 text-center">
+                        <h4 class="font-bold">1. Buat Tiket</h4>
+                        <p class="text-xs">Via Portal / Email</p>
+                    </div>
+                    <div class="h-12 w-1 bg-gray-300"></div>
+                    <div class="flowchart-step bg-white border-2 border-gray-300 p-4 rounded-lg z-10 w-64 text-center">
+                        <h4 class="font-bold text-[#007EA7]">2. Triase & Prioritas</h4>
+                        <p class="text-sm">Oleh Analis Dukungan L1</p>
+                    </div>
+                    <div class="h-12 w-1 bg-gray-300"></div>
+                    <div class="flowchart-step bg-white border-2 border-gray-300 p-4 rounded-lg z-10 w-64 text-center">
+                        <h4 class="font-bold text-[#007EA7]">3. Penugasan</h4>
+                        <p class="text-sm">Ke Spesialis Relevan</p>
+                    </div>
+                    <div class="h-12 w-1 bg-gray-300"></div>
+                     <div class="flowchart-step bg-white border-2 border-gray-300 p-4 rounded-lg z-10 w-64 text-center">
+                        <h4 class="font-bold text-[#007EA7]">4. Penyelesaian</h4>
+                        <p class="text-sm">Solusi & Dokumentasi</p>
+                    </div>
+                    <div class="h-12 w-1 bg-gray-300"></div>
+                    <div class="flowchart-step bg-[#003459] text-white p-4 rounded-full z-10 w-48 text-center">
+                        <h4 class="font-bold">5. Penutupan</h4>
+                        <p class="text-xs">Konfirmasi & Survei</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kpi" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#007EA7] mb-2">Solusi 3: KPI Spesifik, Relevan, dan Objektif</h2>
+                <p class="text-lg mb-6">Meninggalkan KPI generalis dan beralih ke metrik yang mengukur kontribusi unik setiap peran. KPI yang baik mendorong perilaku yang diinginkan dan memberikan penilaian kinerja yang adil.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="kpi-card bg-gray-50 p-5 rounded-lg border-[#00A8E8]">
+                        <h3 class="text-xl font-bold text-[#007EA7]">KPI Spesialis Infrastruktur</h3>
+                        <div class="mt-4 chart-container h-64">
+                            <canvas id="kpiInfraChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="kpi-card bg-gray-50 p-5 rounded-lg border-[#00A8E8]">
+                        <h3 class="text-xl font-bold text-[#007EA7]">KPI Spesialis Dukungan</h3>
+                        <div class="mt-4 chart-container h-64">
+                            <canvas id="kpiSupportChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="kpi-card bg-gray-50 p-5 rounded-lg border-[#00A8E8] md:col-span-2 lg:col-span-1">
+                        <h3 class="text-xl font-bold text-[#007EA7]">KPI Manajer IT</h3>
+                        <div class="mt-4 chart-container h-64">
+                            <canvas id="kpiManagerChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="roadmap" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#007EA7] mb-4">Peta Jalan Implementasi</h2>
+                <p class="text-lg mb-6">Transformasi ini akan dilakukan secara bertahap untuk memastikan kelancaran transisi dan adopsi yang efektif oleh seluruh tim.</p>
+                <div class="relative border-l-4 border-[#00A8E8] ml-4 pl-8">
+                    <div class="mb-10">
+                        <div class="absolute w-6 h-6 bg-[#00A8E8] rounded-full -left-3.5 border-4 border-white"></div>
+                        <h3 class="text-2xl font-bold text-[#003459]">Fase 1: Quick Wins (0-3 Bulan)</h3>
+                        <p class="text-sm text-gray-500 mb-2">Fondasi Awal</p>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>Implementasi sistem tiket (misal: Freshdesk).</li>
+                            <li>Wajibkan semua laporan via tiket, hentikan WhatsApp.</li>
+                            <li>Migrasi SOP ke knowledge base.</li>
+                            <li>Ajukan proposal rekrutmen 1 Analis Dukungan L1.</li>
+                        </ul>
+                    </div>
+                    <div class="mb-10">
+                        <div class="absolute w-6 h-6 bg-[#00A8E8] rounded-full -left-3.5 border-4 border-white"></div>
+                        <h3 class="text-2xl font-bold text-[#003459]">Fase 2: Stabilisasi (3-9 Bulan)</h3>
+                        <p class="text-sm text-gray-500 mb-2">Penguatan Sistem</p>
+                         <ul class="list-disc list-inside space-y-1">
+                            <li>Rekrut dan latih staf baru.</li>
+                            <li>Terapkan kerangka KPI baru yang spesifik peran.</li>
+                            <li>Implementasi manajemen inventaris spare part.</li>
+                            <li>Luncurkan program pelatihan berdasarkan skills matrix.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="absolute w-6 h-6 bg-[#00A8E8] rounded-full -left-3.5 border-4 border-white"></div>
+                        <h3 class="text-2xl font-bold text-[#003459]">Fase 3: Pematangan (9+ Bulan)</h3>
+                        <p class="text-sm text-gray-500 mb-2">Menuju Keunggulan Operasional</p>
+                         <ul class="list-disc list-inside space-y-1">
+                            <li>Evaluasi penambahan staf ke-5 untuk shift 24/7.</li>
+                            <li>Terapkan pola shift 24/7 (misal: 4 on, 4 off).</li>
+                            <li>Lakukan tinjauan kuartalan terhadap semua proses dan KPI.</li>
+                            <li>Fokus pada proyek inovasi dan perbaikan proaktif.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center p-6 bg-[#003459] text-white mt-8">
+        <p>&copy; 2025 Pandawa 24 Jam. Divisi IT Strategis.</p>
+    </footer>
+
+    <script>
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const wrapLabel = (label) => {
+            const maxLength = 16;
+            if (label.length <= maxLength) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        };
+        
+        const palette = {
+            blue: '#00A8E8',
+            darkBlue: '#007EA7',
+            navy: '#003459',
+            lightGray: '#F0F0F0',
+            darkGray: '#333333'
+        };
+
+        const staffRatioCtx = document.getElementById('staffRatioChart').getContext('2d');
+        new Chart(staffRatioCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Pandawa 24 Jam', 'Standar Industri Ideal'],
+                datasets: [{
+                    label: 'Jumlah Karyawan per 1 Staf IT',
+                    data: [43, 18],
+                    backgroundColor: [palette.blue, palette.darkBlue],
+                    borderColor: [palette.blue, palette.darkBlue],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Jumlah Karyawan'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                           title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+        const kpiInfraCtx = document.getElementById('kpiInfraChart').getContext('2d');
+        new Chart(kpiInfraCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Uptime Infrastruktur', 'Keberhasilan Backup', 'Kinerja Backend', 'Maintenance Preventif', 'Kontribusi Proyek'],
+                datasets: [{
+                    label: 'Bobot KPI',
+                    data: [35, 20, 15, 15, 15],
+                    backgroundColor: [palette.navy, palette.darkBlue, palette.blue, '#58B9E1', '#90DDF0'],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 12,
+                            font: { size: 10 }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                           title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+        const kpiSupportCtx = document.getElementById('kpiSupportChart').getContext('2d');
+        new Chart(kpiSupportCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Resolusi Awal (FCR)', 'Waktu Resolusi', 'Kepuasan Pengguna (CSAT)', 'Konten Knowledge Base', 'Kontribusi Proyek'],
+                datasets: [{
+                    label: 'Bobot KPI',
+                    data: [30, 20, 25, 10, 15],
+                    backgroundColor: [palette.navy, palette.darkBlue, palette.blue, '#58B9E1', '#90DDF0'],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 12,
+                            font: { size: 10 }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                           title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+        const kpiManagerCtx = document.getElementById('kpiManagerChart').getContext('2d');
+        const managerLabels = ['Keunggulan Operasional', 'Keuangan & Aset', 'Penyampaian Proyek', 'Kepemimpinan Tim'];
+        new Chart(kpiManagerCtx, {
+            type: 'radar',
+            data: {
+                labels: managerLabels.map(wrapLabel),
+                datasets: [{
+                    label: 'Bobot KPI Manajer',
+                    data: [30, 25, 30, 15],
+                    fill: true,
+                    backgroundColor: 'rgba(0, 168, 232, 0.2)',
+                    borderColor: palette.blue,
+                    pointBackgroundColor: palette.blue,
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: palette.blue
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: {
+                            display: true
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 35,
+                        ticks: {
+                            stepSize: 10
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                           title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
